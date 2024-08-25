@@ -8,9 +8,9 @@ app.use(cors());
 
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
-    const user_id = 'ReshmaS24122003'; // Replace with your full name and DOB
-    const email = 'reshma.s2021c@vitstudent.ac.in'; // Replace with your college email
-    const roll_number = '21BIT0700'; // Replace with your roll number
+    const user_id = 'ReshmaS24122003';
+    const email = 'reshma.s2021c@vitstudent.ac.in';
+    const roll_number = '21BIT0700';
 
     const numbers = [];
     const alphabets = [];
@@ -36,10 +36,8 @@ app.post('/bfhl', (req, res) => {
     });
 });
 
-app.get('/bfhl', (req, res) => {
-    res.status(200).json({
-        operation_code: 1
-    });
+app.get('/', (req, res) => {
+    res.send('Backend is running!');
 });
 
 const PORT = process.env.PORT || 3000;
